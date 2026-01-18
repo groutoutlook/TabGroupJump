@@ -1,10 +1,8 @@
 # Tab Groups Jump
 A Visual studio extension for switching to different tab groups.
 
-[In this question](https://stackoverflow.com/questions/23381874/how-can-i-switch-to-a-different-tab-group-using-the-keyboard-in-visual-studio-20) someone wants to switch between different tab groups in Visual Studio; currently there is no built-in way to do so, so this extension adds a way.
-
 ## Installation
-- Straightforward as using release or self-built `.vsix` file.
+- Straightforward as using release or self-built `.vsix` file. There is no warranty given I am living on the insider release as well.
 ## Exposed Commands
 
 Exposes various commands for navigating between tab groups:
