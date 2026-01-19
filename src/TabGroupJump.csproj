@@ -162,14 +162,14 @@
     <Reference Include="Microsoft.VisualStudio.CommandBars, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.14.3.25407\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Imaging, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Imaging.14.3.25407\lib\net45\Microsoft.VisualStudio.Imaging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <!-- <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.14.3.25407\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
+    <!-- <Reference Include="Microsoft.VisualStudio.Imaging, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.Imaging.14.3.25407\lib\net45\Microsoft.VisualStudio.Imaging.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
     <Reference Include="Microsoft.VisualStudio.OLE.Interop">
       <HintPath>C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
       <Private>false</Private>
@@ -201,14 +201,14 @@
       <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.10.0.10.0.30319\lib\net40\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.11.0.11.0.50727\lib\net45\Microsoft.VisualStudio.Shell.Immutable.11.0.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.12.0.12.0.21003\lib\net45\Microsoft.VisualStudio.Shell.Immutable.12.0.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <!-- <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.11.0.11.0.50727\lib\net45\Microsoft.VisualStudio.Shell.Immutable.11.0.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
+    <!-- <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.12.0.12.0.21003\lib\net45\Microsoft.VisualStudio.Shell.Immutable.12.0.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable">
       <HintPath>C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.Shell.Immutable.dll</HintPath>
       <Private>false</Private>
@@ -255,18 +255,19 @@
       <HintPath>..\packages\Microsoft.VisualStudio.TextManager.Interop.8.0.8.0.50727\lib\Microsoft.VisualStudio.TextManager.Interop.8.0.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Threading, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Threading.14.1.131\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
-      <Private>True</Private>
+    <!-- <Reference Include="Microsoft.VisualStudio.Threading, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.Threading.14.1.131\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
+    <Reference Include="Microsoft.VisualStudio.Utilities, Version=18.0.0.0, Culture=neutral">
+      <HintPath>C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.Utilities.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Utilities, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Utilities.14.3.25407\lib\net45\Microsoft.VisualStudio.Utilities.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Validation, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.VisualStudio.Validation.14.1.111\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <!-- <Reference Include="Microsoft.VisualStudio.Validation, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"> -->
+      <!-- <HintPath>..\packages\Microsoft.VisualStudio.Validation.14.1.111\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
