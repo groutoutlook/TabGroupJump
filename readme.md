@@ -1,5 +1,5 @@
 # Tab Groups Jump
-A Visual studio extension for switching to different tab groups.
+A Visual Studio 2026 extension for switching to different tab groups.
 
 ## Installation
 - Straightforward as using release or self-built `.vsix` file. There is no warranty given I am living on the insider release as well.
@@ -20,7 +20,9 @@ It also exposes all of the above via the Tools menu:
 
 ![tools-menu](docs/tools-menu.png)
 
-It also assigns a default keyboard shortcut to `Tools.NavigateTabGroups.Previous` (`CTRL+ALT+Left`) and  `Tools.NavigateTabGroups.Next` (`CTRL+ALT+Right`)
+It also assigns a default keyboard shortcut to `Tools.NavigateTabGroups.Previous` (`Ctrl+w ctrl+alt+w`) and  `Tools.NavigateTabGroups.Next` (`Ctrl+w ctrl+w`)
+
+You are meant to change it yourselves.
 
 # Contributors
 

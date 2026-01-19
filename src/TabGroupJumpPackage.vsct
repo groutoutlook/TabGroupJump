@@ -71,7 +71,8 @@
         <Icon guid="guidImages" id="bmpLeftArrow" />
         <Strings>
           <ButtonText>Navigate Left</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Left</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Left</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Left</CanonicalName>
         </Strings>
       </Button>
 
@@ -80,7 +81,8 @@
         <Icon guid="guidImages" id="bmpRightArrow" />
         <Strings>
           <ButtonText>Navigate Right</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Right</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Right</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Right</CanonicalName>
         </Strings>
       </Button>
 
@@ -89,7 +91,8 @@
         <Icon guid="guidImages" id="bmpUpArrow" />
         <Strings>
           <ButtonText>Navigate Up</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Up</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Up</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Up</CanonicalName>
         </Strings>
       </Button>
 
@@ -98,7 +101,8 @@
         <Icon guid="guidImages" id="bmpDownArrow" />
         <Strings>
           <ButtonText>Navigate Down</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Down</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Down</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Down</CanonicalName>
         </Strings>
       </Button>
 
@@ -107,7 +111,8 @@
         <Icon guid="guidImages" id="bmpLeftArrow" />
         <Strings>
           <ButtonText>Navigate Previous</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Previous</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Previous</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Previous</CanonicalName>
         </Strings>
       </Button>
 
@@ -116,7 +121,8 @@
         <Icon guid="guidImages" id="bmpRightArrow" />
         <Strings>
           <ButtonText>Navigate Next</ButtonText>
-          <LocCanonicalName>NavigateTabGroups.Next</LocCanonicalName>
+          <LocCanonicalName>DocumentGroupJump.Next</LocCanonicalName>
+          <CanonicalName>DocumentGroupJump.Next</CanonicalName>
         </Strings>
       </Button>
 
@@ -136,12 +142,12 @@
   <KeyBindings>
     <KeyBinding guid="guidTabGroupJumpPackageCmdSet"
                 id="CommandIdJumpPrevious"
-                mod1="CONTROL ALT" key1="VK_LEFT"
+                mod1="CONTROL" key1="W" mod2="CONTROL ALT" key2="W"
                 editor="guidVSStd97" />
       
     <KeyBinding guid="guidTabGroupJumpPackageCmdSet"
                 id="CommandIdJumpNext"
-                mod1="CONTROL ALT" key1="VK_RIGHT"
+                mod1="CONTROL" key1="W" mod2="CONTROL" key2="W"
                 editor="guidVSStd97" />
   </KeyBindings>
 

@@ -20,7 +20,7 @@ build:
 alias ei:= edit-in-ide
 [group('dev')]
 edit-in-ide:
-    devenv ./NavigateTabGroups.sln
+    devenv (rvpa ./*sln*)
 
 alias r := run
 default_args := 'args here'
@@ -55,4 +55,4 @@ script:
 
 alias br := build-release
 build-release:
-    msbuild NavigateTabGroups.sln /p:Configuration=Release
+    msbuild (rvpa ./*sln*) /p:Configuration=Release
