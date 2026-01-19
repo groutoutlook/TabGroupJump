@@ -1,10 +1,4 @@
-﻿//------------------------------------------------------------------------------
-// <copyright file="TabGroupJump.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
-// </copyright>
-//------------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -17,7 +11,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using IServiceProvider = System.IServiceProvider;
 
-namespace TabGroupJumperVSIX
+namespace TabGroupJump
 {
   /// <summary>
   /// Command handler
@@ -176,7 +170,7 @@ namespace TabGroupJumperVSIX
 
         // get the tab to activate
         var offset = isMovingForward ? 1 : -1;
-        int nextIndex = Clamp(filteredPanes.Count, indexOfCurrentTabGroup + offset);
+        int nextIndex = WrapIndex(filteredPanes.Count, indexOfCurrentTabGroup + offset);
 
         // and activate it
         filteredPanes[nextIndex].Window.Activate();
@@ -206,7 +200,7 @@ namespace TabGroupJumperVSIX
         // document?  In that case, try to go up until we find a document pane that we know about. 
         //        
         // This happens for Project Property panes
-        var currentHwnd = ToIntPtr(childWindow.HWnd);
+        var currentHwnd = childWindow.HWnd;
 
         // max out at 20 just in case we keep going up and never find anything. 
         for (int i = 0; i < 20 && currentHwnd != IntPtr.Zero; i++)
@@ -225,7 +219,7 @@ namespace TabGroupJumperVSIX
         {
           foreach (var pane in activePanes)
           {
-            if (ToIntPtr(pane.Window.HWnd) == searchHwnd)
+            if (pane.Window.HWnd == searchHwnd)
             {
               return pane;
             }
@@ -297,38 +291,9 @@ namespace TabGroupJumperVSIX
         // IVsWindowFrame.IsOnScreen is available from Microsoft.VisualStudio.Shell.Interop
         return frame?.IsOnScreen(out int onScreen) == VSConstants.S_OK && onScreen != 0;
       }
+      private static int WrapIndex(int count, int number) =>
+          ((number % count) + count) % count;
 
-      /// <summary>
-      /// Convert a Window.HWnd (which can be int or IntPtr depending on EnvDTE version) to IntPtr safely.
-      /// Accepts the HWnd value (boxed) and returns IntPtr.Zero on failure.
-      /// </summary>
-      private static IntPtr ToIntPtr(object hwndObj)
-      {
-        if (hwndObj == null)
-          return IntPtr.Zero;
-
-        if (hwndObj is IntPtr p)
-          return p;
-
-        if (hwndObj is int i)
-          return new IntPtr(i);
-
-        if (hwndObj is long l)
-          return new IntPtr(l);
-
-        try
-        {
-          return new IntPtr(Convert.ToInt64(hwndObj));
-        }
-        catch
-        {
-          return IntPtr.Zero;
-        }
-      }
-
-      /// <summary> Clamp the given value to be between 0 and <paramref name="count"/>. </summary>
-      private static int Clamp(int count, int number)
-        => (number < 0 ? number + count : number) % count;
     }
 
     [DllImport("user32.dll", SetLastError = true)]

@@ -16,6 +16,12 @@ alias b := build
 build:
     # build task here
 
+
+alias ei:= edit-in-ide
+[group('dev')]
+edit-in-ide:
+    devenv ./NavigateTabGroups.sln
+
 alias r := run
 default_args := 'args here'
 [group('debug')]
@@ -46,3 +52,7 @@ seek:
 [script]
 script:
     Write-Host "this is in powershell, without shebang syntax"
+
+alias br := build-release
+build-release:
+    msbuild NavigateTabGroups.sln /p:Configuration=Release

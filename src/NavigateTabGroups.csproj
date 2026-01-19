@@ -56,8 +56,8 @@
     <ProjectGuid>{9045B804-E28E-475B-8373-03A00AEB7C5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TabGroupJumperVSIX</RootNamespace>
-    <AssemblyName>TabGroupJumperVSIX</AssemblyName>
+    <RootNamespace>TabGroupJump</RootNamespace>
+    <AssemblyName>TabGroupJump</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
@@ -92,12 +92,10 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-
   <!-- Ensure the intermediate VSIX directory exists when packaging from the project file directly -->
   <Target Name="EnsureVsixIntermediateDir" BeforeTargets="DetokenizeVsixManifestFile">
     <MakeDir Directories="$(IntermediateOutputPath)" Condition="!Exists('$(IntermediateOutputPath)')" />
   </Target>
-
   <ItemGroup>
     <Compile Include="Properties\Settings.Designer.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -108,14 +106,11 @@
     <Compile Include="TabGroupJump.cs" />
     <Compile Include="TabGroupJumpPackage.cs" />
   </ItemGroup>
-
   <!-- PackageReference (tooling) — keeps the same version as packages.config but allows PackageReference-based restore/targets -->
   <ItemGroup>
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="15.1.192" PrivateAssets="all" />
   </ItemGroup>
-
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,14 +173,13 @@
     <Reference Include="Microsoft.VisualStudio.OLE.Interop">
       <HintPath>C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
       <Private>false</Private>
-      <SpecificVersion>false</SpecificVersion>      
-    </Reference>    
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.15.0">
       <HintPath>C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.Shell.15.0.dll</HintPath>
       <Private>false</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-    
     <!-- Prefer Shell.Framework from a local VS2022 install when available -->
     <Reference Include="Microsoft.VisualStudio.Shell.Framework" Condition="Exists('$(ProgramFiles)\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Shell.Framework.dll')">
       <HintPath>$(ProgramFiles)\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Shell.Framework.dll</HintPath>

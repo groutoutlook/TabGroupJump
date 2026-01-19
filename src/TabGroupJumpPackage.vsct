@@ -49,8 +49,8 @@
       <Menu guid="guidTabGroupJumpPackageCmdSet" id="SubMenu" priority="0x0100" type="Menu">
         <Parent guid="guidTabGroupJumpPackageCmdSet" id="MyMenuGroup"/>
         <Strings>
-          <ButtonText>Navigate Tab Groups</ButtonText>
-          <CommandName>Navigate Tab Groups</CommandName>
+          <ButtonText>Tab Group Jump</ButtonText>
+          <CommandName>Tab Group Jump</CommandName>
         </Strings>
       </Menu>
     </Menus>
